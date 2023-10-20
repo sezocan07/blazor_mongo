@@ -99,4 +99,11 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+    
+    .bloglistImage{
+        width: 75px;
+        height: 75px;
+        border-radius: 35px;
+      
+    }
 

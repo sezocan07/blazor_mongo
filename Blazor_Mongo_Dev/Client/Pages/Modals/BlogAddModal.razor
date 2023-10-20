@@ -1,5 +1,19 @@
-<h3>BlogAddModal</h3>
+<div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input @bind="blog.Title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">Title Yaziniz</small>
+</div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Aciklama Yaziniz</label>
+    <textarea @bind="blog.Context" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
 
-@code {
-    
-}
+<div class="form-group">
+   @if(BlogStatus == true){
+       <img width="150px" height="150px" class="bloglistImage" src="@blog.CloudUrl"  />
+   } else{
+       <InputFile id="fileavatar" OnChange="(e) => ImageUpload(e)" accept="image/jpeg, image/png, image/jpg"/>
+   }
+  
+</div>
+<button @onclick="BlogAdd" class="btn btn-primary">Kaydet</button>

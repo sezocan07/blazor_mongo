@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+﻿using Blazor_Mongo_Dev.Server.Helper;
+using Blazor_Mongo_Dev.Server.Services.Concreates;
+using Blazor_Mongo_Dev.Server.Services.Interfaces;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+
+builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
+    serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
+
+builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+builder.Services.AddScoped<AppStateManager>();
+builder.Services.AddScoped<IImageUploadService, CloudinaryImageUploadService>();
+
 
 var app = builder.Build();
 

@@ -20,8 +20,18 @@
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="/blog-list">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Blog List
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/sweet-alert">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Sweet Alert Page
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/toast">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Toast Alert
             </NavLink>
         </div>
     </nav>
@@ -29,12 +39,6 @@
 
 @code {
     private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    private string ? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private void ToggleNavMenu() {collapseNavMenu = !collapseNavMenu;}
 }
-

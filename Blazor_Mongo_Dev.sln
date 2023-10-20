@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Mongo_Dev.Client", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Mongo_Dev.Shared", "Blazor_Mongo_Dev\Shared\Blazor_Mongo_Dev.Shared.csproj", "{EE0ED336-5EFA-4617-B14D-2D5C27237D90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Mongo_Dev.Admin", "Blazor_Mongo_Dev.Admin\Blazor_Mongo_Dev.Admin.csproj", "{8DD66552-A9FA-430F-83F9-0902B96A76EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EE0ED336-5EFA-4617-B14D-2D5C27237D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE0ED336-5EFA-4617-B14D-2D5C27237D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE0ED336-5EFA-4617-B14D-2D5C27237D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD66552-A9FA-430F-83F9-0902B96A76EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD66552-A9FA-430F-83F9-0902B96A76EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD66552-A9FA-430F-83F9-0902B96A76EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD66552-A9FA-430F-83F9-0902B96A76EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
